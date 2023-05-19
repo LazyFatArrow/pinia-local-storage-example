@@ -44,11 +44,18 @@ export const useStore = defineStore(STORE_NAME, {
 
 // export const useStore = defineStore('main', {
 //   state: () => ({
-//     settings: useStorage(STORE_NAME, {
-//       fontSize: 14,
-//       tabSize: 2,
-//       zoomLevel: 0,
-//     }),
+//     settings: useStorage(
+//       STORE_NAME,
+//       {
+//         fontSize: 14,
+//         tabSize: 2,
+//         zoomLevel: 0,
+//       },
+//       localStorage,
+//       {
+//         mergeDefaults: true,
+//       },
+//     ),
 //   }),
 //   actions: {
 //     updateSettings(partialSettings) {
