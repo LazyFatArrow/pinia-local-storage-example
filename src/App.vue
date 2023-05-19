@@ -7,7 +7,7 @@
 
   const { settings } = storeToRefs(store)
 
-  const handleToggleThemeClick = () => {
+  const handleToggleFontSizeClick = () => {
     store.updateSettings({
       fontSize: settings.value.fontSize === 14 ? 24 : 14,
     })
@@ -20,7 +20,7 @@
   <div>
     <p :style="{ fontSize: fontSize }">the font size is {{ settings.fontSize }}</p>
 
-    <button @click="handleToggleThemeClick">
+    <button @click="handleToggleFontSizeClick">
       <template v-if="settings.fontSize === 14"> Switch to bigger font </template>
 
       <template v-else> Switch to smaller font </template>
